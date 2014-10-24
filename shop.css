@@ -1,0 +1,72 @@
+*{margin: 0; padding: 0;}
+body{
+background-color: black;
+font-size: 20px;
+}
+
+h1{
+padding: 50px 0 30px 10px;
+}
+
+p, form{
+padding: 20px 0 0 10px;
+font-family: Georgia;
+
+}
+
+
+.main{
+position: absolute;
+border: 1px solid red;
+height: 90%;
+width: 1000px;
+margin: 20px 0 0 5%;
+color: red;
+}
+
+.items{
+width: 600px;
+min-height: 100%;
+float: left;
+background-color: green;
+}
+.list{
+position: relative;
+width: 400px;
+min-height: 100%;
+background-color: blue;
+float: left;
+overflow-x: hidden;
+overflow-y: hidden;
+}
+
+
+.list-item{
+display: inline-block;
+border-bottom: 1px solid white;
+width: 200px;
+margin-left: 50px; 
+text-align: center;
+padding: 5px;
+}
+
+.list-num{
+display: inline-block;
+border-bottom: 1px solid white;
+width: 20px;
+margin-left: 10px; 
+text-align: center;
+padding: 5px;
+}
+
+
+#add{
+margin-left: 10px;
+padding: 10px;
+
+}
+
+#new-item, #quantity{
+height: 10px;
+padding: 10px;
+}
