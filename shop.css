@@ -1,24 +1,7 @@
-*{
-margin: 0; padding: 0;
-}
-
+*{margin: 0; padding: 0;}
 body{
+background-color: black;
 font-size: 20px;
-background-image: url('kitchen.jpg');
-background-repeat: no-repeat;
-background-position: top right;
-font-family: Georgia;
-}
-
-.main{
-position: absolute;
-border: 1px solid #141F1F;
-height: 90%;
-width: 1021px;
-margin: 20px 0 0 5%;
-color: #141F1F;
-overflow-y: scroll;
-background-color: #C2D6D6;
 }
 
 h1{
@@ -28,87 +11,62 @@ padding: 50px 0 30px 10px;
 p, form{
 padding: 20px 0 0 10px;
 font-family: Georgia;
+
+}
+
+
+.main{
+position: absolute;
+border: 1px solid red;
+height: 90%;
+width: 1000px;
+margin: 20px 0 0 5%;
+color: red;
 }
 
 .items{
 width: 600px;
 min-height: 100%;
 float: left;
-background-color: #C2D6D6;
-
+background-color: green;
 }
 .list{
 position: relative;
 width: 400px;
 min-height: 100%;
-background-color: #E6E6E6;
+background-color: blue;
 float: left;
+overflow-x: hidden;
+overflow-y: hidden;
 }
+
 
 .list-item{
 display: inline-block;
 border-bottom: 1px solid white;
-width: 250px;
-margin-left: 50px;
+width: 200px;
+margin-left: 50px; 
 text-align: center;
 padding: 5px;
-background-image: url('delete.png');
-background-size: 20px;
-background-repeat: no-repeat;
-background-position: right;
 }
+
+.list-num{
+display: inline-block;
+border-bottom: 1px solid white;
+width: 20px;
+margin-left: 10px; 
+text-align: center;
+padding: 5px;
+}
+
 
 #add{
 margin-left: 10px;
 padding: 10px;
+
 }
 
 #new-item, #quantity{
-height: 25px;
-}
-
-#menu {
-background: #141F1F;
-width: 250px;
-margin: 50px auto 0 50px;
-color: white;
-box-shadow: 
-	0 5px 15px 1px rgba(0, 0, 0, 0.6), 
-	0 0 200px 1px rgba(255, 255, 255, 0.5);
-}
-
-#menu h3 {
-font-size: 14px;
-line-height: 34px;
-padding: 0 10px;
-cursor: pointer;
-background: #141F1F; 
-background: linear-gradient(#141F1F, #5B6262);
-}
-
-#menu li {
-list-style-type: none;
-}
-
-#menu ul ul li a {
-color: white;
-text-decoration: none;
-font-size: 12px;
-line-height: 27px;
-display: block;
-padding: 0 15px;
-transition: all 0.15s;
-}
-
-#menu ul ul li a:hover {
-background: #003545;
-border-left: 5px solid #FFFF99;
-}
-
-#menu ul ul {
-display: none;
-}
-
-#menu li.active.ul{
-display: block;
+height: 10px;
+padding: 10px;
 }

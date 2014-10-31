@@ -1,35 +1,6 @@
 $(document).ready(function() {
 
-	var image = '<span id="xout">delete.png</span>';
-
 	$('#add').click(function(){
-		inputHandler();
-	})
-
-	$('input#new-item, input#quantity').keyup(function (e) { 
-	    var key = e.which; 
-	    if(key == 13) 
-    		{
-		inputHandler();
-           }
-	})
-	
-     $('.choice').click(function(){
-		var selval = $(this).text();
-		document.getElementById('new-item').value = selval;
-	})
-	
-	function addItem(text, quantity) {
-		jQuery('<div/>', {
-			class: 'list-item',
-			text: text + ' (' + quantity + ')',
-			}).appendTo($('.list'))
-		.css('display', 'inline-block');
-	}
-
- 	function inputHandler() {
-	
-		
 		var txtbox = document.getElementById('new-item');
 		var txtval = txtbox.value;
 		var quanbox = document.getElementById('quantity');
@@ -37,29 +8,62 @@ $(document).ready(function() {
 		if(!$.trim($('#new-item').val())) {
 			alert('Please enter text to add to the list');
 		} else {
-			addItem(txtval,quanval);
+			addItem(txtval, quanval);
 			document.getElementById('new-item').value = '';
 			document.getElementById('quantity').value = '1';
-			$("input[type='text']:first").select();
 		};
+	})
+	
+	function addItem(text, quantity) {
+		jQuery('<div/>', {
+			class: 'list-item',
+			text: text,
+			}).appendTo($('.list'))
+		jQuery('<div/>', {
+			class: 'list-num',
+			text: quantity,
+			}).appendTo($('.list'))					
+		.fadeIn()	
+		.css('display', 'inline-block');
+	}
+
+     $( "#remove" ).click(function() { 
+		var text = document.getElementById('list-item');
+		var textval = text.value;
+		var num = document.getElementById('list-num');
+		var numval = num.value;
+		removeItem(textval, numval);		
+ 
+	});
+
+	function removeItem(text,number)
+	{
+	$( "div.list-item" ).remove( ":contains('Milk')" );
+	$( "div.list-num" ).remove( ":contains('1')" );
 	}
 
 
-	
-	$('.list').on('click','.list-item' ,function() { 
-		$(this).css('background', '#C2D6D6');
- 	})
+	$('input#new-item, input#quantity').keyup(function (e) { 
+    var key = e.which; 
+	if(key == 13) 
+    {
+        var txtbox = document.getElementById('new-item');
+		var txtval = txtbox.value;
+		var quanbox = document.getElementById('quantity');
+		var quanval = quanbox.value;
+		
+		if(!$.trim($('#new-item').val())) {
+			alert('Please enter text to add to the list');
+		} 
+		else {
+			addItem(txtval, quanval);
+			document.getElementById('new-item').value = '';
+			document.getElementById('quantity').value = '1';
+		};
+    }
+});
 
-	$(document).on("click", ".list-item", function(){
-    		$(this).closest('div').fadeOut(300);
-	});
 
-	$("#menu h3").click(function(){
-		$("#menu ul ul").slideUp();
-		if(!$(this).next().is(":visible"))
-		{
-			$(this).next().slideDown();
-		}
-	});
+
 	
 });

@@ -1,78 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Shopping List App</title>
-	<link rel="stylesheet" type="text/css" href="shop.css" />
+<title>Shopping List App</title>
+<link rel="stylesheet" type="text/css" href="shop.css" />
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	
+	<script src="app.js"></script>
 </head>	
 
 <body>
-<div class="main">
-	<div class="items">
+
+	<div class="main">
+		<div class="items">
 			<h1>Shopping App</h1>
 			<p>Enter an item to add it to your list</p>
 			<form>
 				New item(s): <input type="text" name="new-item" id="new-item" value="" >
-				Quantity: <input type="number" min="1" max="99" name="quantity" id="quantity" value="1" maxlength="2" size="2">
+				Quantity: <input type="text" name="quantity" id="quantity" value="1" maxlength="2" size="2">
 				<button type="button" id="add" name="add" value="Add Item">Add Item</button>
 			</form>
 			<p>Or select from the choices below:</p>
-			
-		<div id="menu">
-			<ul>
-				<li class="active">
-					<h3>Produce</h3>
-						<ul>
-							<li class="choice"><a href="#">Apples</a></li>
-							<li class="choice"><a href="#">Oranges</a></li>
-							<li class="choice"><a href="#">Asparagus</a></li>
-							<li class="choice"><a href="#">Onions</a></li>
-						</ul>
-				</li>
-				<li>
-					<h3>Dairy</h3>
-						<ul>
-							<li class="choice"><a href="#">Milk</a></li>
-							<li class="choice"><a href="#">Butter</a></li>
-							<li class="choice"><a href="#">American Cheese</a></li>
-							<li class="choice"><a href="#">Yogurt</a></li>
-							<li class="choice"><a href="#">Sour Cream</a></li>
-						</ul>
-				</li>
-				<li>
-					<h3>Meat/Poultry/Fish</h3>
-						<ul>
-							<li class="choice"><a href="#">Ground Beef</a></li>
-							<li class="choice"><a href="#">Steak</a></li>
-							<li class="choice"><a href="#">Chicken Breasts</a></li>
-							<li class="choice"><a href="#">Chicken Wings</a></li>
-							<li class="choice"><a href="#">Whole Turkey</a></li>
-							<li class="choice"><a href="#">Pork Chops</a></li>
-							<li class="choice"><a href="#">Salmon</a></li>
-							<li class="choice"><a href="#">Tuna</a></li>
-							<li class="choice"><a href="#">Halibut</a></li>
-						</ul>
-				</li>
-				<li>
-					<h3>Frozen Foods</h3>
-						<ul>
-							<li class="choice"><a href="#">Pizza</a></li>
-							<li class="choice"><a href="#">Ice Cream</a></li>
-							<li class="choice"><a href="#">Chicken Nuggets</a></li>
-							<li class="choice"><a href="#">Popsicles</a></li>
-						</ul>
-				</li>
-			</ul>
 		</div>
-	</div>
 	
 		<div class="list">
 			<h1>My List</h1>
 		</div>
 
-</div>
-	
-	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script src="app.js"></script>
-
+	</div>
 </body>
 </html>
